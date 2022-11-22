@@ -1,0 +1,504 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+:root {
+  --bg: #f9cc1e;
+  --main-border: #fff;
+  --dark-red: #671938;
+  --overlay: #4ad1bd;
+  --color1: #a04978;
+  --color2: #f1b6ac;
+  --color3: #fbd7d7;
+  --color4: #f45f5e;
+  --color5: #de3a52;
+}
+body > div {
+  width: 400px;
+  height: 250px;
+  background-color: var(--bg);
+  margin: 15px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body > div > div {
+  width: 60%;
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+body > div > div:before,
+body > div > div:after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  width: 10%;
+  height: 10px;
+  background-color: var(--dark-red);
+  border: 4px solid var(--main-border);
+}
+body > div > div:before {
+  left: -4px;
+  border-right: none;
+  border-top-left-radius: 30% 50%;
+  border-bottom-left-radius: 30% 50%;
+  z-index: 99;
+}
+body > div > div:after {
+  right: -4px;
+  border-left: none;
+  border-top-right-radius: 30% 50%;
+  border-bottom-right-radius: 30% 50%;
+}
+/* Start first child  */
+body > div > div > div:first-child {
+  width: 65%;
+  flex: 1;
+  background-color: var(--dark-red);
+  border: 4px solid var(--main-border);
+  border-bottom-width: 3px;
+  border-radius: 14px;
+  -webkit-border-radius: 14px;
+  -moz-border-radius: 14px;
+  -ms-border-radius: 14px;
+  -o-border-radius: 14px;
+  padding: 8px;
+  position: relative;
+}
+body > div > div > div:first-child::before,
+body > div > div > div:first-child::after {
+  content: "";
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  bottom: -1px;
+  z-index: 999;
+  background-image: linear-gradient(
+    to top,
+    var(--dark-red) 40%,
+    transparent 40%
+  );
+}
+body > div > div > div:first-child::before {
+  border-bottom-left-radius: 69%;
+  border-left: 3px solid var(--main-border);
+  left: -3px;
+}
+body > div > div > div:first-child::after {
+  border-bottom-right-radius: 69%;
+  border-right: 3px solid var(--main-border);
+  right: -3px;
+}
+body > div > div > div:first-child > div {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  display: flex;
+}
+body > div > div > div:first-child > div > div:first-child {
+  flex: 1;
+  background-color: var(--main-border);
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  border-right: 3px solid var(--dark-red);
+}
+body > div > div > div:first-child > div > div:first-child > div:first-child {
+  background-color: var(--dark-red);
+  width: 100%;
+  margin-bottom: 10px;
+  flex: 1;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body
+  > div
+  > div
+  > div:first-child
+  > div
+  > div:first-child
+  > div:first-child::before {
+  content: "";
+  width: calc(100% - 12px);
+  height: calc(100% - 12px);
+  position: absolute;
+  bottom: 3px;
+  right: 3px;
+  background-color: #5afae2;
+  opacity: 0.7;
+  border-top-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+body > div > div > div:first-child > div > div:first-child > div:last-child {
+  width: 100%;
+  height: 15%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+body
+  > div
+  > div
+  > div:first-child
+  > div
+  > div:first-child
+  > div:last-child
+  > div:first-child {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body
+  > div
+  > div
+  > div:first-child
+  > div
+  > div:first-child
+  > div:last-child
+  > div:first-child
+  > div {
+  aspect-ratio: 1/1;
+  width: 7px;
+  clip-path: circle();
+  background-color: var(--dark-red);
+  margin-right: 2px;
+}
+body
+  > div
+  > div
+  > div:first-child
+  > div
+  > div:first-child
+  > div:last-child
+  > div:last-child {
+  aspect-ratio: 1/1;
+  width: 13px;
+  clip-path: circle();
+  background-color: var(--dark-red);
+}
+body > div > div > div:first-child > div > div:nth-child(2) {
+  flex-basis: 22%;
+  background-image: linear-gradient(
+    to bottom,
+    var(--color3) 5%,
+    var(--color4) 5%,
+    var(--color4) 80%,
+    var(--color5) 80%
+  );
+  padding: 35px 5px 0;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+body > div > div > div:first-child > div > div:nth-child(2):before {
+  content: "";
+  position: absolute;
+  width: 15%;
+  height: 35%;
+  right: 0;
+  top: 15%;
+  background-color: var(--dark-red);
+  transform: translateX(100%) skewY(18deg);
+  -webkit-transform: translateX(100%) skewY(18deg);
+  -moz-transform: translateX(100%) skewY(18deg);
+  -ms-transform: translateX(100%) skewY(18deg);
+  -o-transform: translateX(100%) skewY(18deg);
+  border: 4px solid var(--main-border);
+  border-left: none;
+  border-bottom: none;
+  border-top-right-radius: 10px;
+}
+
+body > div > div > div:first-child > div > div:nth-child(2):after {
+  content: "";
+  position: absolute;
+  width: 15%;
+  height: 35%;
+  right: 0;
+  top: 46%;
+  background-color: var(--dark-red);
+  transform: translateX(100%) skewY(-18deg);
+  -webkit-transform: translateX(100%) skewY(-18deg);
+  -moz-transform: translateX(100%) skewY(-18deg);
+  -ms-transform: translateX(100%) skewY(-18deg);
+  -o-transform: translateX(100%) skewY(-18deg);
+  border: 4px solid var(--main-border);
+  border-left: none;
+  border-top: none;
+  border-bottom-right-radius: 10px;
+}
+
+body > div > div > div:first-child > div > div:nth-child(2) > div {
+  width: 100%;
+  height: 1.1px;
+  background-color: var(--dark-red);
+  margin-top: 6px;
+  border-radius: 2px;
+}
+
+body > div > div > div:first-child > div > div:last-child {
+  position: absolute;
+  width: 7%;
+  height: 55%;
+  background-color: transparent;
+  right: -10%;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+}
+body > div > div > div:first-child > div > div:last-child > div {
+  width: 100%;
+}
+body > div > div > div:first-child > div > div:last-child > div:first-child {
+  background-color: var(--color3);
+  flex-basis: 10%;
+  border-top-right-radius: 3px;
+  transform: skewY(18deg);
+  -webkit-transform: skewY(18deg);
+  -moz-transform: skewY(18deg);
+  -ms-transform: skewY(18deg);
+  -o-transform: skewY(18deg);
+}
+body > div > div > div:first-child > div > div:last-child > div:nth-child(2) {
+  background-color: var(--color4);
+  flex-basis: 30%;
+  transform: skewY(18deg);
+  -webkit-transform: skewY(18deg);
+  -moz-transform: skewY(18deg);
+  -ms-transform: skewY(18deg);
+  -o-transform: skewY(18deg);
+  border-top-right-radius: 3px;
+}
+body > div > div > div:first-child > div > div:last-child > div:nth-child(3) {
+  background-color: var(--color4);
+  flex-basis: 30%;
+  transform: skewY(18deg);
+  -webkit-transform: skewY(18deg);
+  -moz-transform: skewY(18deg);
+  -ms-transform: skewY(18deg);
+  -o-transform: skewY(18deg);
+}
+body > div > div > div:first-child > div > div:last-child > div:last-child {
+  background-color: var(--color5);
+  flex-basis: 30%;
+  border-bottom-right-radius: 3px;
+  transform: skewY(-18deg);
+  -webkit-transform: skewY(-18deg);
+  -moz-transform: skewY(-18deg);
+  -ms-transform: skewY(-18deg);
+  -o-transform: skewY(-18deg);
+}
+body > div > div > div:first-child > div > div:last-child::before {
+  content: "";
+  width: 99%;
+  height: 85%;
+  position: absolute;
+  background-color: var(--color4);
+  left: 0px;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+}
+/* End first child  */
+/* Start last child  */
+body > div > div > div:last-child {
+  width: 80%;
+  height: 45px;
+  background-color: var(--main-border);
+  border-top-left-radius: 14px;
+  border-top-right-radius: 14px;
+  border: 8px solid var(--dark-red);
+  outline: 4px solid var(--main-border);
+  display: flex;
+  align-items: center;
+  /* overflow: hidden; */
+  position: relative;
+}
+body > div > div > div:last-child:before {
+  content: "";
+  position: absolute;
+  width: 64%;
+  height: 50%;
+  background-color: var(--dark-red);
+  top: -18px;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+}
+body > div > div > div:last-child:after {
+  content: "";
+  position: absolute;
+  width: calc(70% - 25px);
+  height: 16%;
+  top: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  background-image: linear-gradient(
+    to right,
+    var(--color2) 0%,
+    var(--color2) 68%,
+    transparent 68%,
+    transparent 70%,
+    var(--color2) 70%,
+    var(--color2) 100%
+  );
+}
+body > div > div > div:last-child > div:first-child {
+  background-color: var(--dark-red);
+  flex-basis: 35%;
+  height: 65%;
+  margin-left: 15px;
+  border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 3px 3px 3px 0;
+}
+body > div > div > div:last-child > div:first-child > div {
+  background-color: var(--color2);
+  flex-basis: 85%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3px;
+  padding-left: 0;
+}
+body > div > div > div:last-child > div:first-child > div > div:first-child {
+  flex-basis: 45%;
+  display: flex;
+  flex-direction: column;
+}
+body
+  > div
+  > div
+  > div:last-child
+  > div:first-child
+  > div
+  > div:first-child
+  > div {
+  background-color: var(--dark-red);
+  height: 2px;
+  width: 100%;
+  border-top-right-radius: 1px;
+  border-bottom-right-radius: 1px;
+}
+body
+  > div
+  > div
+  > div:last-child
+  > div:first-child
+  > div
+  > div:first-child
+  > div:nth-child(2) {
+  margin: 1px 0;
+}
+body > div > div > div:last-child > div:first-child > div > div:last-child {
+  flex-basis: 16%;
+  aspect-ratio: 1/1;
+  background-color: var(--dark-red);
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  position: relative;
+}
+body
+  > div
+  > div
+  > div:last-child
+  > div:first-child
+  > div
+  > div:last-child:before {
+  content: "";
+  width: calc(100% - 2px);
+  height: calc(100% - 2px);
+  background-color: var(--overlay);
+  position: absolute;
+  border: 1.5px solid var(--dark-red);
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  top: 50%;
+  left: -50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+}
+body > div > div > div:last-child > div:nth-child(2) {
+  flex: 1;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  border-right: 3px solid var(--dark-red);
+}
+body > div > div > div:last-child > div:nth-child(2) > div {
+  background-color: var(--dark-red);
+  height: 35%;
+  flex-basis: 55%;
+  margin-left: 30%;
+  border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+}
+body > div > div > div:last-child > div:last-child {
+  align-self: flex-end;
+  flex-basis: 20%;
+  height: 100%;
+  background-image: linear-gradient(
+    to bottom,
+    var(--color3) 22%,
+    var(--color4) 22%,
+    var(--color4) 61%,
+    var(--color5) 61%
+  );
+  border-top-right-radius: 4px;
+}
+/* End last child  */
