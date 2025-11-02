@@ -54,7 +54,7 @@ body > div > div:after {
   border-top-right-radius: 30% 50%;
   border-bottom-right-radius: 30% 50%;
 }
-/* Start first child  */
+/*Start first child*/
 body > div > div > div:first-child {
   width: 65%;
   flex: 1;
@@ -501,4 +501,4 @@ body > div > div > div:last-child > div:last-child {
   );
   border-top-right-radius: 4px;
 }
-/* End last child  */
+/*End last child*/
